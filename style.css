@@ -1,0 +1,196 @@
+/* --- RESET BÁSICO --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* --- HEADER --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #111;
+  color: white;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #00bcd4;
+}
+
+/* --- SECCIÓN HERO --- */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+
+.botones a {
+  text-decoration: none;
+  color: white;
+  background-color: #00bcd4;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.botones a:hover {
+  background-color: #0097a7;
+}
+
+.texto h1 {
+  position: relative;
+  top: -50px;
+  color: rgb(220, 168, 11);
+  font-weight: bold;
+}
+
+.texto p {
+  position: relative;
+  top: -30px;
+  color: yellow;
+}
+
+.texto {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px 30px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+}
+
+/* --- SECCIÓN DESCARGAS --- */
+#descargar {
+  padding: 50px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+#descargar h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#descargar p {
+  margin-bottom: 20px;
+}
+
+#buscador {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  border: 2px solid #333;
+  font-size: 16px;
+}
+
+/* --- CARDS --- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #fff;
+  background: #2196F3; /* Color de botón por defecto */
+  transition: background 0.3s ease;
+}
+
+.card a:hover {
+  opacity: 0.9;
+}
+
+/* Si quieres diferenciar por categoría */
+.card.addon a {
+  background: #4CAF50;
+}
+
+.card.apk a {
+  background: #FF9800;
+}

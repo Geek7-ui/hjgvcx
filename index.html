@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi página</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <header>
+    <div class="logo">JorgeHKR</div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Cómo funciona</a></li>
+        <li><a href="#">Características</a></li>
+        <li><a href="#descargar">Descargas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN HERO -->
+  <section class="hero">
+    <div class="texto">
+      <h1>Bienvenido amante del Minecraft</h1>
+      <p>
+        Aquí encontrarás los programas que necesitas para tu PC o celular. 
+        Página en proceso HKR 🚀
+      </p>
+      <div class="botones">
+        <a href="https://play.google.com/store/apps" target="_blank">Google Play</a>
+        <a href="https://www.apple.com/app-store/" target="_blank">App Store</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DESCARGAS -->
+  <section id="descargar">
+    <h2>Zona de descargas</h2>
+    <p>Aquí encontrarás todos los archivos organizados por categoría.</p>
+
+    <!-- BUSCADOR -->
+    <input type="text" id="buscador" placeholder="Buscar archivos...">
+
+    <!-- ADDONS -->
+    <div class="categoria">
+      <h3>📦 Addons</h3>
+      <div class="cards">
+        <div class="card addon">
+          <h4>Addons(Marketplace)</h4>
+          <p>Addons Gratis de la Marketplace.</p>
+          <a href="descargas.html">Descargar</a>
+        </div>
+        <div class="card addon">
+          <h4>Addons de armas y Otros</h4>
+          <p>La Aventura Espera.</p>
+          <a href="#">Descargar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- APK -->
+    <div class="categoria">
+      <h3>📱 APK</h3>
+      <div class="cards">
+        <div class="card apk">
+          <h4>Minecraft Bedrock, última versión</h4>
+          <p>Última versión para Android.</p>
+          <a href="https://app.mediafire.com/folder/6vzirxgmdn4r2/1.21.94+Oficial+Grissby.com">Descargar</a>
+        </div>
+        <div class="card apk">
+          <h4>Minecraft_Pach</h4>
+          <p>Que mejor forma que jugar minecraft que con shaders.</p>
+          <a href="https://app.mediafire.com/folder/j78ogo2elrzb8">Descargar</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTROS -->
+    <div class="categoria">
+      <h3>🛠️ Otros</h3>
+      <div class="cards">
+        <div class="card otro">
+          <h4>Archivos(hack)</h4>
+          <p>Inicia Minecraft en tu computadora.</p>
+          <a href="descargas.html">Descargar</a>
+        </div>
+        <div class="card otro">
+          <h4>Archivos(hack)</h4>
+          <p>Inicia Minecraft en tu Android.</p>
+          <a href="#">Descargar</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- SCRIPT BUSCADOR -->
+  <script>
+    const buscador = document.getElementById("buscador");
+    const cards = document.querySelectorAll(".card");
+
+    buscador.addEventListener("keyup", function() {
+      let texto = buscador.value.toLowerCase();
+      cards.forEach(card => {
+        let contenido = card.innerText.toLowerCase();
+        if (contenido.includes(texto)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
