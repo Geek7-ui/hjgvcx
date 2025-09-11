@@ -194,3 +194,63 @@ header nav ul li a:hover {
 .card.apk a {
   background: #FF9800;
 }
+
+/* --- RESPONSIVE --- */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  .hero {
+    height: 80vh;
+    padding: 0 15px;
+  }
+
+  .texto {
+    padding: 30px 20px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .hero {
+    height: auto;
+    padding: 50px 15px;
+  }
+
+  .texto h1 {
+    font-size: 1.8rem;
+    top: 0;
+  }
+
+  .texto p {
+    font-size: 1rem;
+    top: 0;
+  }
+
+  .botones a {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr; /* Una columna en móviles */
+  }
+}
+
+
